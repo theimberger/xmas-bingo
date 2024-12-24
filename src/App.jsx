@@ -30,6 +30,18 @@ const options = [
   'C-List celebrity',
   'Rediscovers love of xmas',
   'Just got back home',
+  'Xmas song rock cover',
+  'Festive montage',
+  'Toxic ex returns',
+  'Enemies to lovers',
+  'Drama from misunderstanding',
+  'Cute older couple',
+  'Main character is a workaholic',
+  'Character guesses they did',
+  'Quirky character gives advice',
+  'Kid ships couple',
+  'Child wise beyond years',
+  "Actor you can't place",
 ]
 
 const Main = () => {
