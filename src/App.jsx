@@ -2,38 +2,42 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 const options = [
-  'Home Alone',
-  'Elf',
-  'Die Hard',
-  'The Grinch',
-  'It\'s a Wonderful Life',
-  'The Polar Express',
-  'A Christmas Story',
-  'The Nightmare Before Christmas',
-  'Love Actually',
-  'Home Alone 2',
-  'The Santa Clause',
-  'National Lampoon\'s Christmas Vacation',
-  'The Muppet Christmas Carol',
-  'Miracle on 34th Street',
-  'The Holiday',
-  'Scrooged',
-  'White Christmas',
-  'The Family Stone',
-  'Jingle All the Way',
-  'The Snowman',
-  'Arthur Christmas',
-  'Bad Santa',
-  'Gremlins',
-  'The Shop Around the Corner',
-  'The Best',
+  'Snowball fight',
+  'Santa Claus',
+  'Santa is real',
+  'Dead realtive',
+  'Wrong S.O.',
+  'Ice skating',
+  'Small town v big city',
+  'They go to a bakery',
+  'Cookie baking / decorating',
+  'Royalty',
+  'Nosy neighbor / parents',
+  'Sudden snowfall',
+  'Caroling',
+  'Decorating the tree',
+  "Someone doesn't like xmas",
+  'Office romance',
+  'Small town Xmas festival',
+  'Almost kiss',
+  'Old flame',
+  'Xmas ghost',
+  'Fake dating',
+  'Someone says they look in love',
+  'Save a family business',
+  'Fixing the family home',
+  'Xmas fundraiser',
+  'C-List celebrity',
+  'Rediscovers love of xmas',
+  'Just got back home',
 ]
 
 const Main = () => {
   const [items, setItems] = useState([])
   const [selectedItems, setSelectedItems] = useState([])
 
-  useEffect(() => {
+
+  const getRandomList = () => {
     // set a list of 24 random movies
     const randomItems = []
     for (let i = 0; i < 24; i++) {
@@ -46,9 +50,14 @@ const Main = () => {
     }
     // add the free space
     randomItems.push(randomItems[12])
-    randomItems[12] = 'Free Space'
+    randomItems[12] = 'They kiss (Free Space)'
     setItems(randomItems)
-  }, [])
+    setSelectedItems(['They kiss (Free Space)'])
+  }
+
+  useEffect(() => {
+    getRandomList()
+  }, ['They kiss (Free Space)'])
 
   return (
     <main>
@@ -69,8 +78,8 @@ const Main = () => {
             {item}
             </div>
         ))}
-
       </div>
+      <div className='reroll' onClick={() => getRandomList()}>Reroll card</div>
     </main>
   )
 }

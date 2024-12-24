@@ -48,3 +48,12 @@ body {
   background-color: #fff;
   color: #500;
 }
+
+.reroll {
+  border-radius: 10px;
+  background-color: #500;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 1rem;
+  margin: 5rem 0 0 0;
+}
