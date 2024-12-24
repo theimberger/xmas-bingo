@@ -43,6 +43,10 @@ const options = [
   'Child wise beyond years',
   "Actor you can't place",
   'Identity reveal',
+  'A proposal',
+  'Festively named character',
+  'Festively named town',
+  'Magical character',
 ]
 
 const Main = () => {
